@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Source Language and Translation Labels -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Source Language"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Translation"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <!-- RadioGroups for Language Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/sourceLanguageGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/englishSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English" />
+
+            <RadioButton
+                android:id="@+id/spanishSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spanish" />
+
+            <RadioButton
+                android:id="@+id/germanSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="German" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/targetLanguageGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/englishTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English" />
+
+            <RadioButton
+                android:id="@+id/spanishTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spanish" />
+
+            <RadioButton
+                android:id="@+id/germanTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="German" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- TextView for Translation Result -->
+    <TextView
+        android:id="@+id/translatedText"
+        android:layout_width="390dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|top"
+        android:text="Translation"
+        android:textSize="24sp" />
+
+    <!-- Fragment Container for EditText -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="279dp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
